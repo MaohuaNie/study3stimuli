@@ -44,8 +44,8 @@ This repository contains the stimuli and dataframes for Study 3, which explores 
 
 - **Challenges faced**:  
   - The absolute skewness of the complex equivalents (**complex_skewness_A**, **complex_skewness_B**) is almost always lower than the absolute skewness of the simple options (**skewness_a**, **skewness_b**). This is due to constraints of maintaining similar EV and SDD. 
+  - However, the absolute skewness of the complex equivalents of right skewed option are always above 0.7 and the left skewed option are always below -0.7, and the non skewed options are almost all in range -0.7 to 0.7.
   
-- However, the absolute skewness of the complex equivalents of right skewed option are always above 0.7 and the left skewed option are always below -0.7, and the non skewed options are almost all in range -0.7 to 0.7.
   
 the EU after applying the probability weighting function with alpha = 0.6 are also not very bad (in ns trials are not so good, but in rl and lr almost perfect.).
 
