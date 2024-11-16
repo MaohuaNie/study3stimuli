@@ -31,33 +31,45 @@ This repository contains the stimuli and dataframes for Study 3, which explores 
 ### Complex Equivalents
 - **`new_EVA`, `new_EVB`**: Expected values of complex equivalents for A and B.  
 - **`new_SDA`, `new_SDB`**: Standard deviations of complex equivalents for A and B.  
-- **`new_skewness_A`, `new_skewness_B`**: Skewness of complex equivalents for A and B.  
+- **`new_skewness_A`, `new_skewness_B`**: Skewness of complex equivalents for A and B.
 
+
+- 
 ### Difference Columns
 - **`skewness_diff`**: Difference in skewness between simple options A and B.  
 - **`new_skewness_D`**: Difference in skewness between complex equivalents A and B.  
-- **`EVD`**, **`new_EVD`**: Difference in EV between options A and B (for both simple and complex pairs).  
-- **`SDD`**, **`new_SDD`**: Difference in SD between options A and B (for both simple and complex pairs).  
+- **`EVD`**: Difference in EV between options A and B (for both simple pairs).
+- **`new_EVD`**: Difference in EV between options A and B (for both complex pairs).  
+- **`SDD`**: Difference in SD between options A and B (for both simple pairs).
+- **`new_SDD`**: Difference in SD between options A and B (for both complex pairs).  
 
 ---
 
 ## Key Insights
 
-1. **Using Study 2 Stimuli (`study3_trials_old`)**:  
-   - Matching EV, SD, and skewness was challenging.  
-   - In many cases, the complex equivalents have **lower absolute skewness** than their simple counterparts due to constraints in matching EV and SDD.  
-   - Some trials are incomplete, as no suitable complex equivalents could be generated for either option A or B.
+### Using Study 2 Stimuli (`study3_trials_old`)
+- The stimuli in this dataframe are based on those used in **Study 2**. I aimed to find **complex equivalents** for the simple options while maintaining similar **expected value (EV)**, **standard deviation (SD)**, and **skewness**. 
+- While I successfully generated complex equivalents for most trials that matched EV, SD, and their differences (**EVD** and **SDD**), it was much harder to achieve similar **skewness**.  
+  - **Observed skewness issue**:  
+    - The absolute skewness of the complex equivalents (**new_skewness_A**, **new_skewness_B**) is almost always lower than the absolute skewness of the simple options (**skewness_a**, **skewness_b**).  
+    - This occurs because the constraints of maintaining similar EV and SDD force the complex equivalents to be less skewed.  
+  - **Missing rows**:  
+    - For two trials, no suitable complex equivalents were found for either option A or B. These rows are missing in the dataframe.  
 
-2. **Using Newly Generated Stimuli (`study3_trials_new`)**:  
-   - Newly generated stimuli allow for better alignment across EV, SD, and skewness.  
-   - Absolute skewness values for complex equivalents are generally lower than those of simple options. However:  
-     - Right-skewed options: skewness > **1.7**  
-     - Left-skewed options: skewness < **-1.7**  
-     - Non-skewed options: skewness between **-0.7 and 0.7**  
-   - After applying the probability weighting function, differences between simple and complex options align with expectations.
+### Using Newly Generated Stimuli (`study3_trials_new`)
+- To address the challenges in matching skewness with Study 2 stimuli, I generated a completely new set of stimuli. These new trials allow for better alignment across **EV**, **SD**, and **skewness**. As previously, the EV and SD were not big problems. 
+- **Advantages of the new stimuli**:  
+  - The skewness values of the complex equivalents:  
+    - **Right-skewed options**: skewness > **1.7**  
+    - **Left-skewed options**: skewness < **-1.7**  
+    - **Non-skewed options**: skewness between **-0.7 and 0.7**  
+  - After applying the **probability weighting function** (Prelec 1 with alpha = .6), the EU changed also in the expected direction for all trials.
+      
+- **Skewness constraints remain**:  
+  - Even with the new stimuli, the absolute skewness values of the complex equivalents are consistently lower than those of the simple options due to the constraints of matching EV and SD.
 
-3. **General Observation**:  
-   - Complex equivalents tend to exhibit less extreme skewness compared to simple options due to the balancing act between EV, SD, and skewness.  
 
+### My personal preference
+- I would prefer using the newly generated stimuli (`study3_trials_new`). While they are not directly derived from Study 2, they align better with the study’s core objectives of maintaining similar EV, SD, and skewness between the simple and complex options.  
 ---
 
