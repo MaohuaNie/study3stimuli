@@ -45,13 +45,13 @@ This repository contains the stimuli and dataframes for Study 3, which explores 
 
 ## Key Insights
 
-### Using Study 2 Stimuli ([`study3_trials_old`](study3_trials_old.csv))
+### Using Study 2 Stimuli ([`study3_trials_old`](study3_trials_old_short.csv))
 - The stimuli in this dataframe are based on those used in **Study 2**. I aimed to find **complex equivalents** for the simple options while maintaining similar **expected value (EV)**, **standard deviation (SD)**, and **skewness**.
 - **Challenges faced**:  
   - The absolute skewness of the complex equivalents (**new_skewness_A**, **new_skewness_B**) is almost always lower than the absolute skewness of the simple options (**skewness_a**, **skewness_b**). This is due to constraints of maintaining similar EV and SDD.
   - Two trials are missing because no suitable complex equivalents could be found for either option A or B.  
 
-### Using Newly Generated Stimuli ([`study3_trials_new`](study3_trials_new.csv))
+### Using Newly Generated Stimuli ([`study3_trials_new`](study3_trials_new_short.csv))
 - To address the challenges in matching skewness with Study 2 stimuli, I generated a completely new set of stimuli. These new trials allow for better alignment across **EV**, **SD**, and **skewness**.
 - **Advantages of the new stimuli**:  
   - Skewness values for complex equivalents:  
